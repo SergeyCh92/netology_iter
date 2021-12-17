@@ -1,7 +1,7 @@
 import datetime
 
-
-path = 'C:/Users/Сергей/Desktop/'
+name = input('Введите имя Вашей пользовательской папки в каталоге "C:/Users" с соблюдением регистра:\n')
+path = f'C:/Users/{name}/Desktop/'
 nested_list = [
     ['a', 'b', 'c'],
     ['d', 'e', 'f', 'h', False],
