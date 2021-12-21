@@ -16,6 +16,7 @@ def decorator_function(my_path):
             with open(f'{my_path}log.txt', 'a') as f:
                 f.write(f'{current_datetime}, название функции\\метода - {func.__name__}, аргументы функции - {args, kwargs},'
                         f'возвращаемое значение - {result}.\n')
+                return result
         return wrapper
     return _decorator_function
 
@@ -46,6 +47,7 @@ class MyIter:
         return self.nest_list[self.cursor][self.cursor_nested]
 
 
+@decor
 def my_gen(nest_list: list):
     len_list = 0
     cursor = 0
